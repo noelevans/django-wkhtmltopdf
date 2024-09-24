@@ -59,6 +59,11 @@ class TestUtils(TestCase):
                                           file_name='file-name'),
                          ['--file-name', 'file-name',
                           '--heart', u'♥'])
+        self.assertEqual(_options_to_args(
+            custom_header='Authentication mytoken',
+            cookie='key1 value1'),
+            ['--cookie', 'key1 value1',
+             '--custom-header', 'Authentication mytoken'])
 
     def test_wkhtmltopdf(self):
         """Should run wkhtmltopdf to generate a PDF"""
