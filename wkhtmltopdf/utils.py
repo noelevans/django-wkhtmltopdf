@@ -46,7 +46,7 @@ NO_ARGUMENT_OPTIONS = ['--collate', '--no-collate', '-H', '--extended-help', '-g
                        '--enable-toc-back-links', '--footer-line', '--no-footer-line',
                        '--header-line', '--no-header-line', '--disable-dotted-lines',
                        '--disable-toc-links', '--verbose']
-MULTI_VALUE_OPTIONS = ['--custom-header', '--cookie']
+MULTI_VALUE_OPTIONS = ['--custom-header', '--cookie', '--post', '--replace']
 
 
 def _options_to_args(**options):
