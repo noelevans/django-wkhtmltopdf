@@ -68,7 +68,9 @@ def _options_to_args(**options):
         if accepts_no_arguments:
             continue
         if is_multi_value_option:
-            flags.extend(value.split())
+            k, v = value.split(maxsplit=1)
+            flags.append(six.text_type(k))
+            flags.append(six.text_type(v))
         else:
             flags.append(six.text_type(value))
     return flags

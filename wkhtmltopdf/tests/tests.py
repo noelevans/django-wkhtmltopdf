@@ -64,6 +64,8 @@ class TestUtils(TestCase):
             cookie='key1 value1'),
             ['--cookie', 'key1', 'value1',
              '--custom-header', 'Authentication', 'mytoken'])
+        with self.assertRaises(ValueError):
+            _options_to_args(custom_header='Authentication')
 
     def test_wkhtmltopdf(self):
         """Should run wkhtmltopdf to generate a PDF"""
